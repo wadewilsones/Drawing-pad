@@ -8,7 +8,6 @@ main.append(grid);
 grid.setAttribute('class', 'gridStyle');
 
 
-
 //Adjusting size for a grid
 function adjustGrid(columns, rows){
     //Adding rows
