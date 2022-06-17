@@ -1,0 +1,14 @@
+{
+  "name": "drawing-pad",
+  "version": "1.0.0",
+  "description": "This app allow you to draw",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Ulada",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^28.1.1"
+  }
+}
