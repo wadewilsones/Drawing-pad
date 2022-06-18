@@ -11,10 +11,10 @@
 </head>
 <body>
     <h1>Hello, you choose a great time to draw!</h1>
-    <form>
-        <input placeholder="Columns number" id = "columns" type ='text' />
-        <input placeholder="Rows number" id = "row" type ='text' />
-        <input type="submit" id = 'btn_change_size' value = "Create custom grid"/>
+    <form id = 'form'>
+        <input placeholder="Columns number" id = "columns" type ='text' name = 'col' max = '40'/>
+        <input placeholder="Rows number" id = "row" type ='text'  name = 'row'/> 
+        <input type="submit" id = 'btn_change_size' value = "Create custom grid" max = '40'/>
     </form>
 
     <main></main>
