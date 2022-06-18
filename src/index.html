@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href ='./style.css' rel = 'stylesheet'>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
@@ -12,7 +11,12 @@
 </head>
 <body>
     <h1>Hello, you choose a great time to draw!</h1>
-    <button id = 'btn_change_size'>Change size</button>
+    <form>
+        <input placeholder="Columns number" id = "columns" type ='text' />
+        <input placeholder="Rows number" id = "row" type ='text' />
+        <input type="submit" id = 'btn_change_size' value = "Create custom grid"/>
+    </form>
+
     <main></main>
     <button id = 'btn_reset' >Reset</button>
 </body>
