@@ -13,32 +13,50 @@ export function ResetGrid(e){
 
 export function adjustGrid(e){
     e.preventDefault();
+
     //Get values from column and row input
-    let col = document.querySelector('#columns').value;
-    let row = document.querySelector('#row').value;
+    let col = document.querySelector('#columns');
+    let row = document.querySelector('#row');
     let grid = document.querySelector('section');
-    createGrid(grid, col, row)
-    
+    //Clean section from children
+    while(grid.firstChild){
+        grid.removeChild(grid.firstChild)
+    }
+    //Create a new grid
+    createGrid(grid, col.value, row.value);
+
+    //After creating a grid - clear input
+
+    document.querySelector('#columns').value = '';
+    document.querySelector('#row').value = '';
+
+
 }
 
 //Creation of grid
 
 export function createGrid(gridName, col, row){
+    const cellNumber = col * row;
+    const sizeCell = 25;
+    const width = col * sizeCell;
+    const height = row * sizeCell;
 
-    let cellNumber = col * row;
+
     for (let i = 0; i < cellNumber; i++){
         let cell = document.createElement('div');
         gridName.append(cell);
-        gridName.style.cssText = 'grid-template-columns: repeat(' + col +',  30px); grid-template-rows: repeat(' + row +', 30px);'
+        gridName.style.cssText = 'grid-template-columns: repeat(' + col + ',' + sizeCell + 'px); grid-template-rows: repeat(' + row + ',' + sizeCell + 'px); width:'+ width +'px; height:' + height +'px;';
+        //gridName.style.cssText = 'grid-template-columns: repeat(' + col + ',' + cellWidth + '%); grid-template-rows: repeat(' + row + ',' + cellWidth + '%); width:500px; margin:auto' 
         cell.setAttribute('class', 'gridCell');
+        
         //Drawing a cell when mousemove
         cell.addEventListener('mousemove', function drawing(e){
             e.preventDefault();
             draw(cell); 
         })
     }
-}
 
+}
 
 //Setting up drawing and clearing
 

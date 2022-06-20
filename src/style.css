@@ -19,10 +19,16 @@ h1{
 
 .gridStyle{
 
-    border:2px solid rgb(232, 220, 220);
     margin: 2em auto 0;
     display: grid;
-    width:480px;
+}
+
+.gridStyle-Clear{
+
+    margin: 2em auto 0;
+    display: grid;
+    grid-template-columns: 0;
+    grid-template-rows: 0;
 }
 
 .gridCell{
