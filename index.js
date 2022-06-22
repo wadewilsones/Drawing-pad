@@ -13,7 +13,7 @@ main.append(grid);
 
 
 //Add blocks to grid
-window.onload = createGrid(grid, 25, 25);
+window.onload = createGrid(grid, 16, 16);
 
 
 //Reset or Adjust the grid.

@@ -9,15 +9,18 @@ body{
     background-color: rgb(255, 255, 255);
 }
 
-h1{
-    text-align: center;
-    font-weight: 300;
-    margin-top: 2em;
-}
+
 
 /*Style for a grid*/
 
+@media screen and (min-width:800px){
 
+    h1{
+        text-align: center;
+        font-weight: 300;
+        margin-top: 2em;
+    }
+    
 .gridStyle{
 
     margin: 2em auto 0;
@@ -123,71 +126,57 @@ form input[type = 'text']{
     background-color: rgba(7, 223, 72, 0.807);
     cursor: pointer;
 }
+}
+
 
 
 /*Smartphone*/
 
-@media screen and (max-width:500px){
+@media screen and (max-width:799px){
+
+    h1{
+        text-align: center;
+        font-weight: 300;
+        font-size:1.3em;
+        margin-top: 2em;
+    }
     
-.gridStyle{
 
-    margin: 2em auto 0;
-    display: grid;
-    max-width: 500px;
-    max-height: 500px;
+    main{
+        max-width:500px;
+        margin: auto;
+    }
+
+    form{
+        display: none;
+        border:2px solid red;
+    }
+
+         #btn_reset{
+        display: block;
+        margin: 2em auto;
+        padding: 20px 50px;
+        border-radius: 10px;
+        cursor: pointer;
+        font-size: 1.2em;
+        -webkit-appearance: none;
+    }
+
+    .gridStyle{
+
+        margin: 2em auto 0;
+        display: grid;
+
+    }
+
+    .gridCell{
+        border: 1px solid rgb(218, 217, 211);
+    }
+    
+
+
+
+    
+    
 }
-
-.gridStyle-Clear{
-
-    margin: 2em auto 0;
-    display: grid;
-    grid-template-columns: 0;
-    grid-template-rows: 0;
-}
-
-.gridCell{
-    border: 1px solid rgb(218, 217, 211);
-}
-
-.gridCell:hover{
-    background-color: rgb(105, 96, 96);
-}
-
-/*Input styles*/
-
-form{
-
-    margin: auto;
-    width:400px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    -webkit-appearance: none;
-}
-
-form input[type = 'text']{
-
-    box-shadow:rgba(121, 111, 111, 0.3) 0px 5px 10px;
-    background-color: rgba(255, 255, 255, 0.738);
-    border-radius: 5px;
-    padding: 10px;
-    margin-top: 2em;
-    -webkit-appearance: none;
-}
-
-/*Style for grid-cleaner and size buttons*/
-
-#btn_change_size,#btn_reset{
-    display: block;
-    margin: 2em auto;
-    padding: 20px 50px;
-    border-radius: 10px;
-    cursor: pointer;
-    font-size: 1.2em;
-    -webkit-appearance: none;
-}
-
-
-
-}
+    

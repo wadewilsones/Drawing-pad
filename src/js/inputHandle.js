@@ -46,8 +46,7 @@ export function createGrid(gridName, col, row, color){
     for (let i = 0; i < cellNumber; i++){
         let cell = document.createElement('div');
         gridName.append(cell);
-        gridName.style.cssText = 'grid-template-columns: repeat(' + col + ',' + sizeCell + 'px); grid-template-rows: repeat(' + row + ',' + sizeCell + 'px); width:'+ width +'px; height:' + height +'px;';
-        //gridName.style.cssText = 'grid-template-columns: repeat(' + col + ',' + cellWidth + '%); grid-template-rows: repeat(' + row + ',' + cellWidth + '%); width:500px; margin:auto' 
+        gridName.style.cssText = 'grid-template-columns: repeat(' + col + ',' + sizeCell + 'px); grid-template-rows: repeat(' + row + ',' + sizeCell + 'px); max-width:'+ width +'px; max-height:' + height +'px;';
         cell.setAttribute('class', 'gridCell');
 
         //Drawing a cell when mousemove
