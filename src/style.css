@@ -2,7 +2,8 @@
     margin:0;
     padding:0;
     border:0;
-    font-family: Roboto, Helvetica, sans-serif
+    font-family: Roboto, Helvetica, sans-serif;
+    -webkit-appearance: none;
 }
 
 body{
@@ -160,6 +161,8 @@ form input[type = 'text']{
         cursor: pointer;
         font-size: 1.2em;
         -webkit-appearance: none;
+        -moz-appearance:    none;
+        appearance:         none;
     }
 
     .gridStyle{
