@@ -1,5 +1,5 @@
 //Modules import
-import {ResetGrid, adjustGrid, createGrid, draw } from './src/js/inputHandle';
+import {ResetGrid, adjustGrid, createGrid } from './src/js/inputHandle';
 import './src/style.css';
 
 //Creating a grid for a pad
@@ -11,8 +11,10 @@ grid.setAttribute('class', 'gridStyle');
 
 main.append(grid);
 
+
 //Add blocks to grid
-window.onload = createGrid(grid, 16, 16);
+window.onload = createGrid(grid, 25, 25);
+
 
 //Reset or Adjust the grid.
 

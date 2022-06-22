@@ -27,20 +27,21 @@ export function adjustGrid(e){
 
     //After creating a grid - clear input
 
-    document.querySelector('#columns').value = '';
-    document.querySelector('#row').value = '';
+    document.querySelector('#columns').value = null;
+    document.querySelector('#row').value = null;
 
 
 }
 
+
+
 //Creation of grid
 
-export function createGrid(gridName, col, row){
+export function createGrid(gridName, col, row, color){
     const cellNumber = col * row;
     const sizeCell = 25;
     const width = col * sizeCell;
     const height = row * sizeCell;
-
 
     for (let i = 0; i < cellNumber; i++){
         let cell = document.createElement('div');
@@ -48,20 +49,23 @@ export function createGrid(gridName, col, row){
         gridName.style.cssText = 'grid-template-columns: repeat(' + col + ',' + sizeCell + 'px); grid-template-rows: repeat(' + row + ',' + sizeCell + 'px); width:'+ width +'px; height:' + height +'px;';
         //gridName.style.cssText = 'grid-template-columns: repeat(' + col + ',' + cellWidth + '%); grid-template-rows: repeat(' + row + ',' + cellWidth + '%); width:500px; margin:auto' 
         cell.setAttribute('class', 'gridCell');
-        
-        //Drawing a cell when mousemove
-        cell.addEventListener('mousemove', function drawing(e){
-            e.preventDefault();
-            draw(cell); 
-        })
-    }
 
+        //Drawing a cell when mousemove
+        cell.addEventListener('mouseover', function drawingStart(e){
+            e.preventDefault();
+            draw(cell);
+    })
+
+    }
 }
+
 
 //Setting up drawing and clearing
 
+
 export function draw(cell){
-    cell.style.cssText = 'background-color:black';
+    
+    cell.style.cssText = `background-color:black`;
 }
 
 export function clear(cell){
